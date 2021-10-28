@@ -32,9 +32,10 @@ spec:
   driverContainer:
     artifacts:
       images:
-        - name: "oot-source-driver:latest"
-          kind: ImageStreamTag
+        - name: "${INTERNAL_REGISTRY}/oot-driver/oot-source-driver:latest"
+          kind: DockerImage
           namespace: "oot-driver"
           path:
             - sourcePath: "/usr/src/oot-driver/."
               destinationDir: "./"
+          pullsecret: external-registry
