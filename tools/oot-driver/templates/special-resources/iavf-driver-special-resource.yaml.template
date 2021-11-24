@@ -28,7 +28,7 @@ spec:
     - Name: "KERNEL_SOURCE"
       Value: "${KERNEL_SOURCE}"
     - Name: "IAVF_DRIVER_VERSION"
-      Value: "4.2.7"
+      Value: "4.3.12"
   driverContainer:
     artifacts:
       images:
