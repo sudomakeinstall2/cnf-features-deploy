@@ -32,7 +32,7 @@ spec:
   driverContainer:
     artifacts:
       images:
-        - name: "${INTERNAL_REGISTRY}/oot-driver/oot-source-driver:latest"
+        - name: "${INTERNAL_REGISTRY}/oot-source-driver:latest"
           kind: DockerImage
           namespace: "oot-driver"
           path:

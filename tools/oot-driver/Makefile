@@ -36,10 +36,10 @@ helm-create-config-map: helm-repo-index
 
 
 build-source-container:
-	podman build -t $(INTERNAL_REGISTRY)/oot-driver/oot-source-driver:latest -f Dockerfile.source .
+	podman build -t $(INTERNAL_REGISTRY)/oot-source-driver:latest -f Dockerfile.source .
 
 push-source-container:
-	podman push --authfile=$(AUTH_FILE) --tls-verify=$(TLS_VERIFY) $(INTERNAL_REGISTRY)/oot-driver/oot-source-driver:latest
+	podman push --authfile=$(AUTH_FILE) --tls-verify=$(TLS_VERIFY) $(INTERNAL_REGISTRY)/oot-source-driver:latest
 
 create-machine-config:
 	./hack/create-mc.sh $(EXTERNAL_REGISTRY) $(NODE_LABEL)
